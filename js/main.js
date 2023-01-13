@@ -1,10 +1,7 @@
 
 let datosPersona;
 
-// fetch('https://randomuser.me/api/').then(response => response.json())
-// .then(response => datosPersona = response.results[0])
-// .catch(err => console.error(err));
-
+// Recibo los datos de persona de una API y los guardo en la variable datosPersona
 async function datosFetch () {
     const respuesta = await fetch( 'https://randomuser.me/api/');
     return await respuesta.json()
@@ -12,12 +9,12 @@ async function datosFetch () {
 
 const divHeaderButton = document.querySelector(".header-bottom");
 
+// A partir de la siguiente funcion, llamo a los datos de la API que necesito para poder incorporarlo en mi html
 function crearHTML() {
 
     datosFetch().then(datos => {
         datosPersona = datos.results[0];
         let html;
-        console.log(datosPersona);
     
         const name = datosPersona.name.first;
         const lastName = datosPersona.name.last;
@@ -39,23 +36,25 @@ function crearHTML() {
         `;
         divHeaderButton.innerHTML += html;
     })
-
-    
     
 }
 
+// Llamo a la función para que imprima los datos pedidos en el html
 crearHTML()
 
 
 const buttonEducation = document.querySelector(".button-education");
-const cardText = document.querySelector("#container-cards")
+const cardText = document.querySelector("#container-cards");
 
+
+
+// La funcion coloca las tres targetas de estudios en el html
 function informationEducation(){
     let html;
     
     html = `
     <div class="row row-cols-3 justify-content-md-center gap-5 cards-ed">
-            <div class="card col" style="width: 18rem;">
+            <div class="card col" id="card-hov" style="width: 18rem;">
                 <img src="imgs/html5-img.png" class="card-img-top" alt="html5-img">
                 <div class="card-body">
                 <h5 class="card-title">HTML5</h5>
@@ -67,7 +66,7 @@ function informationEducation(){
                 </ul>
             </div>
 
-        <div class="card col" style="width: 18rem;">
+        <div class="card col" id="card-hov" style="width: 18rem;">
             <img src="imgs/css-img.png" class="card-img-top" alt="css-img">
             <div class="card-body">
             <h5 class="card-title">CSS3</h5>
@@ -79,7 +78,7 @@ function informationEducation(){
             </ul>
         </div>
 
-    <div class="card col" style="width: 18rem;">
+    <div class="card col" id="card-hov" style="width: 18rem;">
         <img src="imgs/js-img.png" class="card-img-top" alt="js-img">
         <div class="card-body">
         <h5 class="card-title">JAVASCRIPT</h5>
@@ -96,12 +95,14 @@ function informationEducation(){
     cardText.innerHTML = html;
 }
 
+// Al hacer click en el boton educacion, llama a la funcion que imprime a las tarjetas
 buttonEducation.addEventListener("click", () => {
     informationEducation()
 })
 
 const divInformation = document.querySelector(".additional-info");
 
+// Funcion que solicita datos de la API respecto a datos personales y los imprime en el html 
 function crearDivInformation() {
 
     datosFetch().then(datos => {
@@ -124,16 +125,29 @@ function crearDivInformation() {
     })
 }
 
+// Llama a la funcion que imprime datos personales
 crearDivInformation()
 
 const buttonFormul = document.querySelector("#button-formul");
+const inputEmail = document.querySelector("#InputEmail1");
 
+
+// Botón validacion de formulario y a la vez evita que se recargue la página
 buttonFormul.addEventListener("click", (evt) => {
     evt.preventDefault()
-    Swal.fire({
-        icon: 'success',
-        title: 'Tu mail se ha enviado correctamente',
-        showConfirmButton: true,
-        timer: 1500
-    })
+
+    if (inputEmail.value == "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Necesitas poner tu email para poder enviar este formulario'
+        })
+    } else {
+        Swal.fire({
+            icon: 'success',
+            title: 'Tu mail se ha enviado correctamente',
+            showConfirmButton: true,
+            timer: 1500
+        })
+    }
 })
