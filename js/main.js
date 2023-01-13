@@ -131,7 +131,6 @@ crearDivInformation()
 const buttonFormul = document.querySelector("#button-formul");
 const inputEmail = document.querySelector("#InputEmail1");
 
-
 // Botón validacion de formulario y a la vez evita que se recargue la página
 buttonFormul.addEventListener("click", (evt) => {
     evt.preventDefault()
