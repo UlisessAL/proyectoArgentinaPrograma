@@ -1,0 +1,132 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(183, 183, 238);
+}
+
+@media screen and (min-width: 1440px){
+
+    
+
+    .header-cv{
+        width: 1440px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-header{
+        width: 1440px;
+        height: 400px;
+    }
+
+    .profile-picture{
+        width: 250px;
+        border-radius: 100px;
+        margin-top: -150px;
+    }
+
+    .lastname-name{
+        font-size: 40px;
+        font-family: 'Rowdies', cursive;
+    }
+
+    .profession{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .main-cv{
+        width: 1440px;
+        background-color:rgb(188, 236, 242) ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-me{
+        width: 1440px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me{
+        width: 700px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .container-cards{
+        background-color: rgb(255, 255, 255);
+    }
+
+    .education{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .cards-ed{
+        margin: 40px;
+    }
+
+    .title-info{
+        margin-top: 100px;
+        background-color: rgb(69, 78, 121);
+        width: 1440px;
+        display: flex;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+    }
+    .multiple-info{
+
+        display: flex;
+        height: 500px;
+        margin-top: 10px;
+    }
+
+    .information, .additional-info{
+        display: flex;
+        flex-direction: column;
+        width: 420px;
+        margin: 100px;
+        color: rgb(5, 2, 2);
+    }
+
+    .formu{
+        width: 1020px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .h3-info{
+        font-size: 25px;
+        align-items: flex-start;
+        font-family: 'Josefin Slab', serif;
+    }
+
+    .h2-formu{
+        font-family: 'Rowdies', cursive;
+        color: rgb(255, 255, 255);
+    }
+
+    .formulario-cv{
+        background-color: rgb(240, 245, 250);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+
+}
+
+

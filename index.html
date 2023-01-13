@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link a bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+
+    <!-- Link a mi hoja de estilos -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Link a google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&display=swap" rel="stylesheet">
+
+
+    <title>CV-Argentina programa</title>
+</head>
+<body>
+    
+    <header class="header-cv">
+        <div>
+            <img class="img-header" src="imgs/foto-header.jpg" alt="Foto-de-James-Harrison-en-Unsplash">
+        </div>
+        <div class="header-bottom">
+
+        </div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#educacion">Educación</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-cv">
+
+        <section class="section-me">
+            <div class="about-me">
+                <h2>Sobre mi:</h2>
+                <p>Soy una persona dedicada a lo que le gusta, muy trabajador, eficaz y eficiente. Suelo adaptarme rápido al ámbito laboral y soy muy sociable, por lo que afianzarme con mis compañeros no es problema para mi.</p>
+                <p><i class="fa-solid fa-language"></i> Español</p>
+                <p><i class="fa-solid fa-language"></i> Ingles</p>
+                <h3>Pasatiempos:</h3>
+                <p>-Leer</p>
+                <p>-Jugar a videojuegos</p>
+                <p>-Y sobre todo programar</p>
+            </div>
+        </section>
+
+        <h2 class="education" id="educacion"> <button class="button-education btn btn-light">Educación</button> </h2>
+        <div id="container-cards" class="container-cards container"></div>
+
+        <div class="title-info" id="contact">
+            <h2>Contactame</h2>
+        </div>
+        <section class="multiple-info">
+            
+            <div id="additional-info" class="additional-info">
+            
+                    
+            </div>
+
+            <div class="contact">
+                
+                <div class="formu">
+                    <h2 class="h2-formu">Envíame un mail</h2>
+                    <form method="get" class="formulario-cv">
+                        <div class="mb-3">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" required>
+                        <div id="emailHelp" class="form-text">Tu email solo será compartido a mi, y no se compartira con nadie más</div>
+                        </div>
+                        <div class="mb-3">
+                        <label for="exampleInput" class="form-label">Cuentame tu asunto</label>
+                        <textarea type="text" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="button-formul">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Link a Sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Link a font Awesome -->
+    <script src="https://kit.fontawesome.com/5df46f1699.js" crossorigin="anonymous"></script>
+    
+    <!-- Link a bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
+
+    <!-- Link a mi archivo js -->
+    <script src="js/main.js"></script>
+</body>
+</html>
