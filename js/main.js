@@ -40,7 +40,7 @@ function crearHTML() {
 }
 
 // Llamo a la función para que imprima los datos pedidos en el html
-crearHTML()
+crearHTML();
 
 
 const buttonExperience = document.querySelector(".button-experience");
@@ -83,7 +83,7 @@ function showExperience() {
 
 // Al clickear el botón, llama a la funcion showExperience e esconde el botón
 buttonExperience.addEventListener("click", () => {
-    showExperience()
+    showExperience();
     buttonExperience.className = "button-display-none"
 })
 
@@ -157,10 +157,9 @@ function crearDivInformation() {
 
     datosFetch().then(datos => {
         datosPersona = datos.results[0];
-        console.log(datosPersona);
 
-        const email = datosPersona.email
-        const telephoneNumber = datosPersona.cell
+        const email = datosPersona.email;
+        const telephoneNumber = datosPersona.cell;
         const location = datosPersona.location.city;
 
         let html;
@@ -176,14 +175,14 @@ function crearDivInformation() {
 }
 
 // Llama a la funcion que imprime datos personales
-crearDivInformation()
+crearDivInformation();
 
 const buttonFormul = document.querySelector("#button-formul");
 const inputEmail = document.querySelector("#InputEmail1");
 
 // Botón validacion de formulario y a la vez evita que se recargue la página
 buttonFormul.addEventListener("click", (evt) => {
-    evt.preventDefault()
+    evt.preventDefault();
 
     if (inputEmail.value == "") {
         Swal.fire({
