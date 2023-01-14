@@ -43,6 +43,51 @@ function crearHTML() {
 crearHTML()
 
 
+const buttonExperience = document.querySelector(".button-experience");
+const experienceCont = document.querySelector(".experience");
+
+// La función al ser usada muestra la experiencia de la persona
+
+function showExperience() {
+    let html;
+    html = `
+    <div class="div-education-experience">
+        <h2 class="lastname-name">Experiencia</h2>
+            <div class="row row-cols-2 justify-content-md-center gap-5 cards-ed">
+                <div class="card col" id="card-hov" style="width: 18rem;">
+                    <img src="imgs/santander-img.png" class="card-img-top" alt="santander-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Banco Santander</h5>
+                        <p class="card-text">Escribí el código de una página web con la capacidad de recibir a más de quinientos mil usuarios por día.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Noviembre 2021 - Enero 2022</li>
+                    </ul>
+                </div>
+
+                <div class="card col" id="card-hov" style="width: 18rem;">
+                    <img src="imgs/galicia-img.png" class="card-img-top" alt="galicia-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Banco Galicia</h5>
+                        <p class="card-text">Colaboré para optimizar los tiempos de carga de la página web en un 23% y reduje el porcentaje de errores mensuales de la página de inicio de la compañía en un 18%.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Marzo 2022 - Noviembre 2022</li>
+                    </ul>
+                </div>
+            </div>
+        </div>`
+
+    experienceCont.innerHTML = html;
+}
+
+// Al clickear el botón, llama a la funcion showExperience e esconde el botón
+buttonExperience.addEventListener("click", () => {
+    showExperience()
+    buttonExperience.className = "button-display-none"
+})
+
+
 const buttonEducation = document.querySelector(".button-education");
 const cardText = document.querySelector("#container-cards");
 
@@ -53,6 +98,9 @@ function informationEducation(){
     let html;
     
     html = `
+
+    <div class="div-education-experience">
+    <h2 class="lastname-name">Educación</h2>
     <div class="row row-cols-3 justify-content-md-center gap-5 cards-ed">
             <div class="card col" id="card-hov" style="width: 18rem;">
                 <img src="imgs/html5-img.png" class="card-img-top" alt="html5-img">
@@ -89,15 +137,17 @@ function informationEducation(){
         <li class="list-group-item">Skill: 65%</li>
         </ul>
     </div>
-</div>
+    </div>
+    </div>
 `
 
     cardText.innerHTML = html;
 }
 
-// Al hacer click en el boton educacion, llama a la funcion que imprime a las tarjetas
+// Al hacer click en el boton educacion, llama a la funcion que imprime a las tarjetas e esconde el botón
 buttonEducation.addEventListener("click", () => {
     informationEducation()
+    buttonEducation.className = "button-display-none"
 })
 
 const divInformation = document.querySelector(".additional-info");

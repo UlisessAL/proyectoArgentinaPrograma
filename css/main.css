@@ -131,6 +131,16 @@ body{
         justify-content: center;
     }
 
+    .button-display-none{
+        display: none;
+    }
+
+    .div-education-experience{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 /* Media query para dispositivos moviles con pantalla mas grande */
@@ -324,7 +334,7 @@ body{
     }    
 
     #card-hov:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
 }
