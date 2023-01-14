@@ -141,6 +141,10 @@ body{
         align-items: center;
     }
 
+    #experience{
+        width: 120px;
+    }
+
 }
 
 /* Media query para dispositivos moviles con pantalla mas grande */
@@ -265,6 +269,10 @@ body{
         align-items: flex-start;
     }
 
+    #experience{
+        width: 768px;
+    }
+
 }
 
 
@@ -335,6 +343,10 @@ body{
 
     #card-hov:hover{
         transform: scale(1.05);
+    }
+
+    #experience{
+        width: 1440px;
     }
 
 }
